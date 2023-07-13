@@ -17,7 +17,7 @@ jobs:
       - name: build sbt
         run: sbt clean package
       - name: list package
-        run: ls 
+        run: ls ./target        
         
   deploy:
     runs-on: ubuntu-latest
