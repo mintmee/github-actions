@@ -8,3 +8,4 @@ lazy val root = (project in file("."))
     idePackagePrefix := Some("com.mintmee.sample")
   )
 
+
