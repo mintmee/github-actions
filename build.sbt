@@ -5,7 +5,8 @@ ThisBuild / scalaVersion := "2.13.11"
 lazy val root = (project in file("."))
   .settings(
     name := "sample",
-    idePackagePrefix := Some("com.mintmee.sample")
+    idePackagePrefix := Some("com.mintmee.sample"),
+    ThisBuild / crossPaths := false
   )
 
 
