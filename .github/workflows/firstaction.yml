@@ -6,7 +6,8 @@ name: Hello Actions
 on:
   # Triggers the workflow on push events but only for the "main" branch
   push:
-    tags:
+    tags:  
+      - 'v[0-9]+.[0-9]+.[0-9]+-[a-zA-Z]*'
       - 'v[0-9]+.[0-9]+.[0-9]'
 
   # Allows you to run this workflow manually from the Actions tab
