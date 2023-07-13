@@ -11,20 +11,14 @@ on:
   
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains job called "build" and "deploy"
-  build:
+  # This workflow contains a single job called "build and deploy"
+  build_n_deploy:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: build sbt
-        run: sbt clean package       
-        
-  deploy:
-    runs-on: ubuntu-latest
-    # The job would wait for the "build" job
-    needs: build
-    steps:
+        run: sbt clean package
       - name: Upload package
         run: echo aws s3 cp blabla  
       - name: list package
