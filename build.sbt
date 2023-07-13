@@ -7,3 +7,4 @@ lazy val root = (project in file("."))
     name := "sample",
     idePackagePrefix := Some("com.mintmee.sample")
   )
+
