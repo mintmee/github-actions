@@ -1,4 +1,4 @@
-name: CI
+name: CI/CD
 
 # workflow will get started when a tag starts with "v" has been pushed.
 on:
