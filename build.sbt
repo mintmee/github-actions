@@ -12,7 +12,6 @@ lazy val root = (project in file("."))
   .settings(
     name := "sample",
     idePackagePrefix := Some("com.mintmee.sample"),
-    ThisBuild / crossPaths := false
   )
 
 
