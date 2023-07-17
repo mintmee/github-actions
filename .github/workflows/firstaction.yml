@@ -22,5 +22,5 @@ jobs:
       - name: Upload package
         run: echo aws s3 cp blabla  
       - name: list package
-        run: ls ./target 
+        run: ls ./target/scala-2.12
         
