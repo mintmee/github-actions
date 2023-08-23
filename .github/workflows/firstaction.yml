@@ -23,4 +23,7 @@ jobs:
         run: echo aws s3 cp blabla  
       - name: list package
         run: ls ./target/scala-2.12
-        
+      - name: get tag name
+        run: |
+         echo "Tag name from GITHUB_REF_NAME: $GITHUB_REF_NAME"
+         echo "Tag name from github.ref_name: ${{  github.ref_name }}"
