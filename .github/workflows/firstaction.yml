@@ -1,5 +1,4 @@
 name: CI/CD
-
 # workflow will get started when a tag starts with "v" has been pushed.
 on:
   push:
@@ -17,13 +16,13 @@ jobs:
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: actions/checkout@v2
-      - name: Set output
-        id: vars
-        run: echo "tag=${GITHUB_REF#refs/*/}" >> $GITHUB_OUTPUT
-      - name: Check output
-        env:
-          RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
+      - name: build sbt
+        run: sbt clean package
+      - name: Upload package
+        run: echo aws s3 cp blabla  
+      - name: list package
+        run: ls ./target/scala-2.12
+      - name: get tag name
         run: |
-          echo $RELEASE_VERSION
-          echo ${{ steps.vars.outputs.tag }}
+         echo "Tag name from GITHUB_REF_NAME: $GITHUB_REF_NAME"
+         echo "Tag name from github.ref_name: ${{  github.ref_name }}"
